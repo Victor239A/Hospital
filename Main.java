@@ -1,40 +1,23 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
 import javax.swing.*;
-import vistas.LoginView;
+import vistazz.BannerPanel;
+import vistazz.LoginView;
 
-
-// Clase principal que contiene el método main
 public class Main {
-
-    // Método principal, punto de entrada de la aplicación
     public static void main(String[] args) {
-
-
-        //Ventana
-        
-        // Crea una instancia de JFrame (ventana gráfica)
+        // Título y tamaño de la ventana
         JFrame miVentana = new JFrame();
-        
-        // Establece el título que aparecerá en la barra superior de la ventana
         miVentana.setTitle("Hospital SCL");
-        
-       
-        miVentana.setSize(1000,800);
+        miVentana.setSize(1000, 800);
         miVentana.setLayout(new BorderLayout());
+        miVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 
-        JPanel panelBanner= new JPanel();
-        panelBanner.setPreferredSize(new Dimension(500,400));
-        panelBanner.setOpaque(true);
-        panelBanner.setBackground(Color.RED);
-    
-        miVentana.add(panelBanner,BorderLayout.WEST);
-      
-        LoginView panelLogin =new LoginView();
+        // BannerPanel
+        BannerPanel panelBanner = new BannerPanel();
+        miVentana.add(panelBanner.getJPanel(), BorderLayout.WEST);
 
-        miVentana.add(panelLogin.getJPanel());
-
+        // LoginView
+        LoginView panelLogin = new LoginView(miVentana); 
         miVentana.add(panelLogin.getJPanel(), BorderLayout.CENTER);
 
         miVentana.setVisible(true);
