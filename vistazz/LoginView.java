@@ -1,5 +1,7 @@
+
 package vistazz;
 
+import controol.LoginControler;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -7,7 +9,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.*;
 import javax.swing.*;
-import ventanaz.*;
+import ventanaz.DashBoard;
 
 public class LoginView {
 
@@ -57,12 +59,21 @@ public class LoginView {
         gbc.fill = GridBagConstraints.NONE;
         panelLogin.add(entradaBoton, gbc);
 
+      
         // Acción del botón
         entradaBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                frame.dispose(); 
-                new DashBoard(); 
+
+                //Recuperar Datos
+                String entradaUsuario = entradaCorreo.getText();
+                String entradaContraa = entradaContra.getText();
+
+if (new LoginControler().validacionDatos(entradaUsuario, entradaContraa)) {
+    frame.dispose();
+    new DashBoard(); 
+    
+}
             }
         });
     }

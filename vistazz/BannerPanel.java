@@ -1,4 +1,4 @@
-// BannerPanel.java
+
 package vistazz;
 
 import java.awt.Color;
@@ -11,9 +11,9 @@ public class BannerPanel {
 
     public BannerPanel() {
         panelBanner = new JPanel();
-        panelBanner.setPreferredSize(new Dimension(500, 800));
+        panelBanner.setPreferredSize(new Dimension(500, 800)); // Ancho x Alto
         panelBanner.setOpaque(true);
-        panelBanner.setBackground(Color.BLACK);
+        panelBanner.setBackground(Color.RED);
     }
     
     public JPanel getJPanel() {
