@@ -1,20 +1,27 @@
+
 package ventanaz;
-import java.awt.Color;
-import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
+import tabla.TablaEjemplo;
 
 public class DashBoard extends JFrame {
     
-
- 
     public DashBoard(){
-        this.setTitle("DashBoard");
-        this.setSize(920,1080);
-        this.setVisible(true);
-        this.setBackground(Color.GREEN);
-       
+      
+        this.setTitle("Dashboard");
+        this.setSize(800, 600);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         
+
+        TablaEjemplo panelTabla = new TablaEjemplo();
+        this.add(panelTabla, BorderLayout.CENTER);
+        this.setVisible(true);
     }
-   public JFrame getJFrame(){
-return this;
-   }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new DashBoard();
+        });
+    }
 }
