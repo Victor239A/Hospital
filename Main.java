@@ -1,8 +1,8 @@
 // Importa la clase JFrame del paquete javax.swing (para crear la ventana)
 import java.awt.BorderLayout;
 import javax.swing.*;
-import vistazzz.BannerPanel;
-import vistazzz.LoginView;
+import paneles.BannerPanel;
+import paneles.LoginView;
 
 public class Main {
 
@@ -11,8 +11,9 @@ public class Main {
         JFrame miVentana = new JFrame();
         miVentana.setTitle("Hospital SCL");
         miVentana.setSize(1000, 800);
-        miVentana.setLayout(new BorderLayout());
         miVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        miVentana.setLayout(new BorderLayout());
+        miVentana.setLocationRelativeTo(null);
         
         // BannerPanel
         BannerPanel panelBanner = new BannerPanel();

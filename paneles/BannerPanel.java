@@ -1,4 +1,4 @@
-package vistazzz;
+package paneles;
 
 import java.awt.Color;
 import java.awt.Dimension;
