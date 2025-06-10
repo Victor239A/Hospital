@@ -54,7 +54,8 @@ public class Pacientes {
         { 47, "Nuria", 21 },
         { 48, "Ángel", 20 },
         { 49, "Marta", 19 },
-        { 50, "Benjamín", 24 }
+        { 50, "Benjamín", 24 },
+        { 51, "Jhonny", 20 }
     };
 
 
