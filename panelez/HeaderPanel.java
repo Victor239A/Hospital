@@ -6,7 +6,7 @@ import javax.swing.*;
 public class HeaderPanel extends JPanel {
     
     public HeaderPanel() {
-        this.setBackground(Color.GRAY);
+        this.setBackground(Color.WHITE);
         this.setPreferredSize(new Dimension(1000, 65));
         this.setLayout(new GridBagLayout());
 
@@ -17,8 +17,8 @@ public class HeaderPanel extends JPanel {
         GridBagConstraints gbc = new GridBagConstraints();
        
         
-       
- JLabel vista = new JLabel("Dashboard");
+    
+ JLabel vista = new JLabel("Hospital");
         vista.setFont(largeFont);
         vista.setForeground(Color.BLACK);
         gbc.gridx = 0;

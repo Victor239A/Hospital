@@ -9,8 +9,8 @@ import panelez.MenuLateralPanel;
 public class DashBoard extends JFrame {
     
     public DashBoard() {
-        setTitle("DashBoard");
-        setSize(1900, 1000);
+        setTitle("Hospital");
+        setSize(2000, 1100);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLayout(new BorderLayout());
 
