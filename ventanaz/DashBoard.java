@@ -1,29 +1,28 @@
 
 package ventanaz;
-import java.awt.*;
-import javax.swing.*;
-import paneles.MenuLateralPanel;
-import tabla.TablaEjemplo;
+
+import java.awt.BorderLayout;
+import javax.swing.JFrame;
+import panelez.HeaderPanel;
+import panelez.MenuLateralPanel;
 
 public class DashBoard extends JFrame {
     
-    public DashBoard(){
-      
-        this.setTitle("Dashboard");
-        this.setSize(1900, 1000);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public DashBoard() {
+        setTitle("DashBoard");
+        setSize(1900, 1000);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLayout(new BorderLayout());
 
-        
-        this.add(new MenuLateralPanel().getPanel());
-        TablaEjemplo panelTabla = new TablaEjemplo();
-        this.add(panelTabla, BorderLayout.WEST);
-        this.setVisible(true);
-    }
+             this.add(new HeaderPanel().getPanel(),BorderLayout.NORTH);
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new DashBoard();
-        });
+        this.add(new MenuLateralPanel().getPanel(),BorderLayout.EAST);
+        
+        // Crear e integrar la tabla
+        Tabla tabla = new Tabla();
+        this.add(tabla, BorderLayout.EAST); // Agregar directamente al JFrame
+        
+    
+        setVisible(true);
     }
 }

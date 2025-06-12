@@ -1,21 +1,18 @@
-package paneles;
-
+package panelez;
 import java.awt.Color;
 import java.awt.Dimension;
-import javax.swing.*;
+import javax.swing.JPanel;
 
 public class BannerPanel {
-    
     private JPanel panelBanner;
 
     public BannerPanel() {
-        panelBanner = new JPanel();
-        panelBanner.setPreferredSize(new Dimension(500, 800)); // Ancho x Alto
+        this.panelBanner = new JPanel();
+        panelBanner.setPreferredSize(new Dimension(500,800));
         panelBanner.setOpaque(true);
         panelBanner.setBackground(Color.RED);
     }
-    
-    public JPanel getJPanel() {
+    public JPanel getBanner(){
         return panelBanner;
     }
 }
